@@ -1,0 +1,47 @@
+<div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" rel="home" href="<?= base_url();?>" title="Search Flickr">FlickrAng</a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <div class="col-sm-6 col-md-6">
+                        <form class="navbar-form" role="search" method="get" id="search-form" name="search-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Seach for tags Ex:Dog" id="query"
+                                       name="query" ng-model="searchQuery">
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-success"><span
+                                            class="glyphicon glyphicon-search"
+                                            ng-click="searchTag()"></span> </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <ul>
+            <li ng-repeat="photos in public_photos.items">
+                <div class="wrapper">
+                    <a href="{{photos.link}}">
+                        <div class="fix">
+                            <img class="img-responsive img-rounded" ng-src="{{photos.media.m}}">
+                            <div class="desc"> <p class="desc_content">{{photos.author}}</p> </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

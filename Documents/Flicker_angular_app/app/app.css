@@ -1,0 +1,51 @@
+/* app css stylesheet */
+html,body{
+  background-color:black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li{
+  margin-bottom: 6%;
+}
+
+img{
+  width: 53%;
+  height: 80%;
+}
+
+#container{
+  text-align:center;
+}
+
+header{
+  height:40px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ffba1c;
+}
+
+button{
+  height:34px;
+}
+.img-responsive {
+  margin: 0 auto;
+}
+div.desc{
+  background-color: #000;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
+.fix{
+  width: 100%;
+  padding: 0px;
+}
+.wrapper{
+  position:relative;
+}
